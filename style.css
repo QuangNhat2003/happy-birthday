@@ -1,0 +1,1277 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    background: linear-gradient(to right, #FBDAE9, #EFB0C9);
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container .boxcontainer{
+    width: 700px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255),
+                5px 5px 15px rgb(0, 0, 0, 0.5);
+    background-image: radial-gradient(circle farthest-corner at center, #ffe0ee 0%, #ffd3ee 100%);
+    animation: bgr 4s forwards;
+    transition: 1s;
+}
+@keyframes bgr {
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.container .image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    animation: flag 2s forwards;
+    opacity: 0;
+    visibility: hidden;
+    animation-delay: 2s;
+    z-index: 1;
+    transition: all 1s;
+}
+@keyframes flag{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+.container .image > img{
+    width: 500px;
+}
+.container .text-happybirthday{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateY(-160px);
+    animation: texthappy 3s forwards;
+    animation-delay: 3s;
+    transition: 1s ease-in-out;
+}
+@keyframes texthappy{
+    0%{
+        transform: translateY(-160px);
+    }
+    40%{
+        transform: translateY(90px);
+    }
+    50%{
+        transform: translateY(95px);
+    }
+    55%{
+        transform: translateY(40px);
+    }
+    60%{
+        transform: translateY(80px);
+    }
+    70%{
+        transform: translateY(50px);
+    }
+    80%, 90%, 100%{
+        transform: translateY(70px);
+    }
+}
+.container .text-happybirthday::before{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 150px;
+    background: #333;
+    top: -25%;
+    z-index: -1;
+}
+.container .text-happybirthday img{
+    width: 200px;
+    transform: translateX(-50%);
+}
+.container .cake{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    animation: cake 3s ease forwards;
+    animation-delay: 4s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100000;
+}
+@keyframes cake{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(200px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+}
+.container .cake img{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    margin-top: 50px;
+    z-index: 10000;
+    transition: 1s;
+    cursor: pointer;
+}
+.container .cake img:hover{
+    animation: cake1 0.5s infinite linear;
+}
+@keyframes cake1{
+    0%{
+        transform: rotate(5deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+.box-balloon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.box-balloon .balloon-item1{
+    position: absolute;
+}
+.box-balloon .balloon-item1 img{
+    width: 80px;
+}
+.box-balloon .balloon-item1:nth-child(1){
+    animation: item1 8s forwards,
+                item2 4s 8s linear infinite;
+    transition: all 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes item2{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        right: 86%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 58%;
+        transform: translateY(0px);
+    }
+    25%{
+        opacity: 1;
+        visibility: visible;
+        right: 86%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 58%;
+        transform: translateY(5px);
+    }
+    50%{
+        opacity: 1;
+        visibility: visible;
+        right: 86%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 58%;
+        transform: translateY(0px);
+    }
+    75%{
+        opacity: 1;
+        visibility: visible;
+        right: 86%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 58%;
+        transform: translateY(-5px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        right: 86%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 58%;
+        transform: translateY(0px);
+    }
+}
+@keyframes item1{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        right: 0%;
+        transform: translateX(-50%);
+        transform: rotate(5deg);
+        bottom: -50%;
+    }
+    10%{
+        transform: rotate(-5deg);
+    }
+    20%{
+        transform: rotate(5deg);
+    }
+    30%{
+        transform: rotate(-5deg);
+    }
+    40%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    60%{
+        transform: rotate(5deg);
+    }
+    70%{
+        transform: rotate(-5deg);
+    }
+    80%{
+        transform: rotate(5deg);
+    }
+    90%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        right: 86%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 58%;
+    }
+}
+.box-balloon .balloon-item1:nth-child(2){
+    animation: item3 8s forwards,
+                item4 4s 8s linear infinite;
+    transition: all 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes item4{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        left: 85%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 60%;
+        transform: translateY(0px);
+    }
+    25%{
+        opacity: 1;
+        visibility: visible;
+        left: 85%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 60%;
+        transform: translateY(5px);
+    }
+    50%{
+        opacity: 1;
+        visibility: visible;
+        left: 85%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 60%;
+        transform: translateY(0px);
+    }
+    75%{
+        opacity: 1;
+        visibility: visible;
+        left: 85%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 60%;
+        transform: translateY(-5px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        left: 85%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 60%;
+        transform: translateY(0px);
+    }
+}
+@keyframes item3{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        left: 0%;
+        transform: translateX(-50%);
+        transform: rotate(5deg);
+        bottom: -50%;
+    }
+    10%{
+        transform: rotate(-5deg);
+    }
+    20%{
+        transform: rotate(5deg);
+    }
+    30%{
+        transform: rotate(-5deg);
+    }
+    40%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    60%{
+        transform: rotate(5deg);
+    }
+    70%{
+        transform: rotate(-5deg);
+    }
+    80%{
+        transform: rotate(5deg);
+    }
+    90%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        left: 85%;
+        transform: translateX(0%);
+        transform: rotate(0deg);
+        bottom: 60%;
+    }
+}
+.container .box-cloud{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.container .cloud{
+    position: absolute;
+    z-index: 10000;
+    opacity: 0;
+    animation: cloud 10s infinite linear;
+    animation-delay: 4s;
+}
+@keyframes cloud{
+    0%{
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(800px);
+    }
+}
+.container .cloud:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .cloud:first-child::before{
+    position: absolute;
+    content: 'Hãy ấn vào thư em nhé';
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    width: 60px;
+    font-size: 9px;
+    align-items: center;
+    z-index: 100000;
+}
+.container .cloud:last-child::before{
+    position: absolute;
+    content: 'hê sờ lô, hơ sờ ly ly';
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    align-items: center;
+    z-index: 100000;
+}
+.container .cloud:last-child{
+    position: absolute;
+    z-index: 10000;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: cloud2 13s infinite linear;
+    animation-delay: 4.5s;
+    margin-top: 10px;
+}
+@keyframes cloud2{
+    0%{
+        opacity: 1;
+        transform: translateX(800px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+}
+.container .cloud > img{
+    width: 100px;
+    filter: drop-shadow(1px 4px 0px rgb(188, 188, 188));
+}
+.container .box-firework{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container .box-firework .firework{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    animation: firework 2s forwards;
+    animation-delay: 5s;
+    transform: translate(30px, 300px);
+}
+.container .box-firework .firework > img{
+    width: 100px;
+}
+@keyframes firework{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.container .box-firework .firework #firework1{
+    position: absolute;
+    width: 20px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50px, 35px);
+    /* transform: translate(-60px, -50px); */
+    animation: firework1 2s linear infinite;
+    animation-delay: 6s;
+    transition: all 1s ease-in-out;
+}
+@keyframes firework1{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50px, 35px);
+        width: 20px;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        width: 150px;
+        transform: translate(-70px, -70px);
+    }
+}
+.container .box-firework .firework:last-child{
+    transform: scaleX(-1);
+    top: 300px;
+    right: 30px;
+}
+.container .spark{
+    position: absolute;
+}
+span{
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+    animation: fadeInOut 1s linear infinite;
+}
+@keyframes fadeInOut{
+    0%,100%{
+        opacity: 0;
+    }
+    20%, 80%{
+        opacity: 1;
+    }
+}
+.container .paperCannons{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+}
+.container .paperCannons > img{
+    width: 350px;
+    transition: all 1s;
+    animation: paperCannons 2s forwards;
+    animation-delay: 7s;
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes paperCannons{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+.container .box-giftbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container .box-giftbox > img:nth-child(1){
+    width: 50px;
+    margin-top: 360px;
+    margin-left: 120px;
+    transform: rotate(-10deg);
+    animation: giftbox2 0.5s linear infinite;
+    animation-delay: 8.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s;
+}
+.container .box-giftbox > img:nth-child(2){
+    position: absolute;
+    width: 30px;
+    margin-top: 250px;
+    margin-left: -150px;
+    transform: rotate(15deg);
+    filter: blur(1px);
+    opacity: 0;
+    visibility: hidden;
+    animation: giftbox1 4s forwards;
+    animation-delay: 8s;
+}
+.container .box-giftbox > img:nth-child(3){
+    position: absolute;
+    width: 25px;
+    margin-top: 200px;
+    margin-left: 450px;
+    transform: rotate(15deg);
+    filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    animation: giftbox1 4s forwards;
+    animation-delay: 8s;
+}
+.container .box-giftbox > img:nth-child(4){
+    position: absolute;
+    width: 55px;
+    margin-top: 380px;
+    margin-left: 340px;
+    transform: rotate(15deg);
+    animation: giftbox2 0.5s linear infinite;
+    animation-delay: 8.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s;
+}
+@keyframes giftbox1{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes giftbox2{
+    0%{
+        visibility: visible;
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+    25%{
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(0deg);
+    }
+    50%{
+        visibility: visible;
+        opacity: 1;
+        transform: rotate(10deg);
+    }
+    75%{
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(-10deg);
+    }
+}
+.container .box-giftbox > img:nth-child(5){
+    position: absolute;
+    width: 30px;
+    bottom: 0;
+    transform: translate(-90px, 50px);
+    animation: giftbox3 2s linear infinite;
+    animation-delay: 10s;
+    filter: drop-shadow(0 0 15px red);
+    transition: all 1s;
+}
+.container .box-giftbox > img:nth-child(6){
+    position: absolute;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+    transform: translate(-60px, 50px);
+    animation: giftbox4 2s linear infinite;
+    animation-delay: 11s;
+    filter: drop-shadow(0 0 15px red);
+    transition: all 1s;
+}
+@keyframes giftbox3{
+    0%{
+        transform: translate(-100px, 35px);
+    }
+    2%{
+        transform: translate(-80px, 5px) rotate(10deg);
+    }
+    4%{
+        transform: translate(-70px, -25px) rotate(20deg);
+    }
+    6%{
+        transform: translate(-55px, -50px) rotate(30deg);
+    }
+    8%{
+        transform: translate(-50px, -60px) rotate(40deg);
+    }
+    10%{
+        transform: translate(-45px, -70px) rotate(50deg);
+    }
+    12%{
+        transform: translate(-40px, -80px) rotate(60deg);
+    }
+    14%{
+        transform: translate(-35px, -90px) rotate(70deg);
+    }
+    16%{
+        transform: translate(-30px, -100px) rotate(80deg);
+    }
+    18%{
+        transform: translate(-25px, -110px) rotate(90deg);
+    }
+    20%{
+        transform: translate(-20px, -115px) rotate(100deg);
+    }
+    22%{
+        transform: translate(-15px, -120px) rotate(110deg) scale(1.1);
+    }
+    26%{
+        transform: translate(-10px, -125px) rotate(120deg) scale(1.1);
+    }
+    30%{
+        transform: translate(-5px, -130px) rotate(130deg) scale(1.2);
+    }
+    40%{
+        transform: translate(0px, -135px) rotate(140deg) scale(1.2);
+    }
+    50%{
+        transform: translate(5px, -140px) rotate(150deg) scale(1.2);
+    }
+    60%{
+        transform: translate(10px, -145px) rotate(160deg) scale(1.3);
+    }
+    70%{
+        transform: translate(20px, -150px) rotate(170deg) scale(1.3);
+    }
+    75%{
+        transform: translate(30px, -150px) rotate(180deg) scale(1.3);
+    }
+    80%{
+        transform: translate(40px, -150px) rotate(185deg) scale(1.2);
+    }
+    82%{
+        transform: translate(50px, -145px) rotate(190deg) scale(1.1);
+    }
+    84%{
+        transform: translate(55px, -140px) rotate(200deg) scale(1.1);
+    }
+    86%{
+        transform: translate(60px, -135px) rotate(210deg) scale(1.1);
+    }
+    88%{
+        transform: translate(65px, -130px) rotate(220deg) scale(0.9);
+    }
+    90%{
+        transform: translate(70px, -110px) rotate(230deg) scale(0.9);
+    }
+    92%{
+        transform: translate(80px, -80px) rotate(240deg) scale(0.8);
+    }
+    94%{
+        transform: translate(90px, -55px) rotate(250deg) scale(0.8);
+    }
+    96%{
+        transform: translate(100px, -20px) rotate(185deg) scale(0.7);
+    }
+    98%{
+        transform: translate(110px, 5px) rotate(195deg) scale(0.6);
+    }
+    100%{
+        transform: translate(120px, 35px) rotate(205deg) scale(0.5);
+    }
+}
+@keyframes giftbox4{
+    0%{
+        transform: translate(0px, 35px);
+    }
+    2%{
+        transform: translate(-20px, 5px) rotate(10deg);
+    }
+    4%{
+        transform: translate(-30px, -25px) rotate(20deg);
+    }
+    6%{
+        transform: translate(-45px, -50px) rotate(30deg);
+    }
+    8%{
+        transform: translate(-50px, -60px) rotate(40deg);
+    }
+    10%{
+        transform: translate(-55px, -70px) rotate(50deg);
+    }
+    12%{
+        transform: translate(-60px, -80px) rotate(60deg);
+    }
+    14%{
+        transform: translate(-65px, -90px) rotate(70deg);
+    }
+    16%{
+        transform: translate(-70px, -100px) rotate(80deg);
+    }
+    18%{
+        transform: translate(-75px, -110px) rotate(90deg);
+    }
+    20%{
+        transform: translate(-80px, -115px) rotate(100deg);
+    }
+    22%{
+        transform: translate(-85px, -120px) rotate(110deg) scale(1.1);
+    }
+    26%{
+        transform: translate(-90px, -125px) rotate(120deg) scale(1.1);
+    }
+    30%{
+        transform: translate(-95px, -130px) rotate(130deg) scale(1.2);
+    }
+    40%{
+        transform: translate(-100px, -135px) rotate(140deg) scale(1.2);
+    }
+    50%{
+        transform: translate(-105px, -140px) rotate(150deg) scale(1.2);
+    }
+    60%{
+        transform: translate(-110px, -145px) rotate(160deg) scale(1.3);
+    }
+    70%{
+        transform: translate(-120px, -150px) rotate(170deg) scale(1.3);
+    }
+    75%{
+        transform: translate(-130px, -150px) rotate(180deg) scale(1.3);
+    }
+    80%{
+        transform: translate(-140px, -150px) rotate(185deg) scale(1.2);
+    }
+    82%{
+        transform: translate(-150px, -145px) rotate(190deg) scale(1.1);
+    }
+    84%{
+        transform: translate(-155px, -140px) rotate(200deg) scale(1.1);
+    }
+    86%{
+        transform: translate(-160px, -135px) rotate(210deg) scale(1.1);
+    }
+    88%{
+        transform: translate(-165px, -130px) rotate(220deg) scale(0.9);
+    }
+    90%{
+        transform: translate(-170px, -110px) rotate(230deg) scale(0.9);
+    }
+    92%{
+        transform: translate(-180px, -80px) rotate(240deg) scale(0.8);
+    }
+    94%{
+        transform: translate(-190px, -55px) rotate(250deg) scale(0.8);
+    }
+    96%{
+        transform: translate(-200px, -20px) rotate(185deg) scale(0.7);
+    }
+    98%{
+        transform: translate(-210px, 5px) rotate(195deg) scale(0.6);
+    }
+    100%{
+        transform: translate(-220px, 35px) rotate(205deg) scale(0.5);
+    }
+}
+.container .mail{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    animation: envelope 1s forwards;
+    animation-delay: 11.5s;
+    z-index: 100000000;
+}
+.container .mail .fa-envelope{
+    position: absolute;
+    margin-top: 50px;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+    z-index: 1000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes envelope{
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+.container .mail .fa-envelope:hover{
+    filter: drop-shadow(0 0 10px red);
+    animation: mail1 0.3s infinite ease-in-out;
+    transition: all 1s ease-in;
+}
+@keyframes mail1{
+    0%{
+        transform: rotate(-10deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+.container .mail .fa-envelope::after{
+    position: absolute;
+    content: '';
+    width: 55px;
+    height: 45px;
+    background: white;
+    z-index: -1;
+    border-radius: 10px;
+}
+.container .boxcute{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container .cute1{
+    position: absolute;
+    top: 210px;
+    left: -100px;
+    animation: cute 3s infinite ease-in-out;
+    animation-delay: 13s;
+}
+@keyframes cute{
+    0%{
+        transform: translateX(0px) rotateZ(0deg) scale(0.7);
+    }
+    50%,60%, 70%,80%,90%,95%{
+        transform: translateX(70px) rotateZ(45deg) scale(1.3);
+    }
+    100%{
+        transform: translateX(10px) rotateZ(0deg) scale(0.3);
+    }
+}
+.container .cute1::after{
+    position: absolute;
+    content: 'Ngạc nhiên chưa "girl especially"';
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    font-size: 10px;
+    background: white;
+    border-radius: 15px;
+    margin-top: -30px;
+    margin-left: -40px;
+    animation: cutemail 3s linear infinite;
+    animation-delay: 13s;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 600;
+}
+@keyframes cutemail{
+    0%{
+        opacity: 1;
+        transform: translate(-60px, 40px) scale(0.1);
+    }
+    50%, 60%, 70%, 80%, 90%, 95%, 99%{
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-60px, 40px) scale(0.1);
+    }
+}
+.container .cute2{
+    position: absolute;
+    top: 210px;
+    right: -100px;
+    transform: scaleX(-1);
+    animation: cute2 3s infinite ease-in-out;
+    animation-delay: 12s;
+}
+@keyframes cute2{
+    0%{
+        transform: translateX(0px) rotateZ(0deg) scale(0.7);
+    }
+    50%,60%, 70%,80%,90%,95%{
+        transform: translateX(-70px) rotateZ(-45deg) scale(1.3);
+    }
+    100%{
+        transform: translateX(-10px) rotateZ(0deg) scale(0.3);
+    }
+}
+.container .cute2::after{
+    position: absolute;
+    content: 'Ú Òa';
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    font-size: 10px;
+    background: white;
+    border-radius: 15px;
+    margin-top: -30px;
+    margin-left: -100px;
+    animation: cutemail2 3s linear infinite;
+    animation-delay: 12s;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 600;
+}
+@keyframes cutemail2{
+    0%{
+        opacity: 1;
+        transform: translate(-10px, 70px) scale(0.1);
+    }
+    50%, 60%, 70%, 80%, 90%, 95%, 99%{
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-10px, 70px) scale(0.1);
+    }
+}
+.container .cute1 img{
+    width: 100px;
+    height: 100px;
+}
+.container .cute2 img{
+    width: 100px;
+    height: 100px;
+}
+.boxMail{
+    position: fixed;
+    background: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.3);
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 100000000;
+}
+.boxMail.active{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.boxMail .boxMail-container{
+    position: absolute;
+    width: 750px;
+    height: 500px;
+    display: flex;
+    margin: 0;
+    transform: scale(0.9);
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    transition: all 0.5s;
+}
+.boxMail .boxMail-container:hover{
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 0 10px red);
+}
+.boxMail .boxMail-container:hover .card1{
+    transform: translate(-187px, -250px) rotateY(-140deg);
+}
+.boxMail .boxMail-container .card1,
+.boxMail .boxMail-container .card2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+.boxMail .boxMail-container .card1{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(169, 0, 0), rgb(202, 0, 0) 30%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.boxMail-container .card1{
+    z-index: 1;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 1s ease-in-out;
+}
+.boxMail .boxMail-container .card1 .userImg{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.boxMail .boxMail-container .card1 .userImg img{
+    position: absolute;
+    object-fit: cover;
+    width: calc(100%);
+    height: calc(100%);
+}
+.boxMail .boxMail-container .card1 h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    transform: rotate(-5deg);
+    text-shadow: 0 0 5px white,
+                0 0 10px white;
+}
+.boxMail .boxMail-container .card2{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 1s;
+}
+.boxMail .boxMail-container .card2 .card2-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #ffd2e4;
+    transition: all 1s;
+    overflow: hidden;
+}
+.boxMail .boxMail-container:hover .card2-content{
+    transform: translate(20px, 20px);
+    box-shadow: -1px -1px 5px rgb(0, 0, 0, 0.4);
+}
+.boxMail .boxMail-container .card2 h3{
+    font-family: 'Dancing Script', cursive;
+    padding: 20px 0px 10px 60px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 25px;
+    text-shadow: 0 0 8px red;
+}
+.boxMail .boxMail-container .card2:hover h3{
+    animation: texth3 3s forwards;
+    animation-delay: 2s;
+    transition: 1s;
+}
+@keyframes texth3{
+    0%{
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0px 10px 60px;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0px 10px 152px; 
+    }
+}
+.boxMail .boxMail-container .card2 h2{
+    font-family: 'Dancing Script', cursive;
+    padding: 0px 20px;
+    text-indent: 20px;
+    font-size: 17px;
+    opacity: 0;
+}
+.boxMail .boxMail-container .card2:hover h2{
+    animation: texth2 2s forwards;
+    animation-delay: 4s;
+    transition: 1s;
+}
+@keyframes texth2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.boxMail .boxMail-container .card2 .card2-content .imageCute2{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    opacity: 0;
+    transition: 1s;
+}
+.boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
+    animation: cute3 1s linear infinite,
+                cute4 3s 2s forwards;
+    animation-delay: 2s;
+    transition: 1s;
+}
+@keyframes cute3{
+    0%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    25%{
+        opacity: 1;
+        transform: rotate(5deg);
+    }
+    50%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    75%{
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+@keyframes cute4{
+    0%{
+        left: 20px;
+    }
+    100%{
+        left: 100px;
+    }
+}
+.boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
+    width: 40px;
+}
+.boxMail .fa-xmark{
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    padding: 10px 25px;
+    cursor: pointer;
+    color: white;
+    z-index: 10000000000000000;
+}
+
+/* ----- hiệu ứng di chuyển chuột----- */
+span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(heart.png);
+    background-size: cover;
+    animation: moveheart 1s linear infinite;
+}
+@keyframes moveheart{
+    0%{
+        transform: translate(0) rotate(0deg);
+    }
+    100%{
+        transform: translate(100px) rotate(360deg);
+    }
+}
+/* ------hết hiệu ứng di chuyển chuột----- */
